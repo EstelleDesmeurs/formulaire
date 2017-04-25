@@ -1,0 +1,26 @@
+body {
+    margin: 50px;
+    padding: 50px;
+}
+
+img {
+    position: relative;
+    top: -70px;
+}
+
+h1 {
+    position: absolute;
+    top: 60px;
+    right: 230px;
+    font-size: 50px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.pouletteform {
+    margin: auto;
+    width: 600px;
+}
