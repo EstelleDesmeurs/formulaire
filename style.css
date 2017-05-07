@@ -1,6 +1,7 @@
-body {
+body { 
     margin: 50px;
     padding: 50px;
+    background-image: url(bckForm.png);
 }
 
 img {
