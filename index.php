@@ -8,7 +8,7 @@
     <title>Technical Support</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
    <div class="row">
   <div class="col-md-6"><img src="hackers-poulette-logo.png" alt="logo">  </div>
   <div class="col-md-6"><h1>How can we<br>help you?</h1></div>
@@ -280,13 +280,12 @@
                 </select><br><!-- error= "Where are you from?" -->
                 </div>
         </div>
+    </div>    
 </div>  
    
 <div class="row">
   <div class="col-md-12">    
-           
-        <fieldset>
-           <legend>Inconvenience</legend> 
+        <legend>Inconvenience</legend> 
             <div id="Subject">       
                 <label>Subject</label> : <select required>
                             <option value="hardware">Hardware Guide</option>
@@ -299,8 +298,7 @@
                 <label>Message</label> : <br>
                        <textarea class="form-control" rows="3"></textarea>
             </div>           
-            <div id="submit"><input type="submit"></div>    
-        </fieldset>             
+            <div id="submit"><input type="submit"></div>                
     </div> 
     <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
@@ -319,19 +317,12 @@
       <div class="checkbox">
         <label>
           <input type="checkbox"> Remember me
-        </label>
- 
-   
-
-
-
-  
-</form>    
-  </div>
-  </div>
-  </div>                        
-               
-
+        </label>                     
+        </div>  
+      </div> 
+    </div>
+    </div>               
+</form>   
 </div>
 
 </body>
