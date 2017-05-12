@@ -38,3 +38,14 @@ img {
     margin-bottom: 0px;
     position: inherit;
 }
+
+.details, .message {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: left;
+    border: none;
+}
+
+.message {
+    padding-bottom: 20px;
+}

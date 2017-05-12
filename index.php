@@ -2,36 +2,29 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Muli|Poppins:700" rel="stylesheet">
     <title>Technical Support</title>
 </head>
 <body>
-<form action="cible.php" method="post">    
-    
-<section class="pouletteform"> 
-      <h1>How can we<br>help you?</h1>
-    <img src="hackers-poulette-logo.png" alt="logo">   
-   <div class="details">
-        <fieldset>
+<div class="container">
+   <div class="row">
+  <div class="col-md-6"><img src="hackers-poulette-logo.png" alt="logo">  </div>
+  <div class="col-md-6"><h1>How can we<br>help you?</h1></div>
+    </div>
+<form class="form-horizontal" action="cible.php" method="post">        
+<div class="row"> 
+    <div class="col-md-12">  
+           <div class="form-group">
             <legend>Customer's details</legend>   
-                <div id="firstname">
-                    <label for="fname">First name</label> : <input type="text" name="fname" id="fname" autofocus required><br><!-- error= "Don't forget to tell us who you are!"-->
-                </div>
-                <div id="lastname"> 
-                    <label for="lname">Last name</label> : <input type="text" name="lname" id="lname" required><br><!-- error= "Don't forget to tell us who you are!"-->
-                </div>  
-                <div id="email">      
-                    <label for="email">Email</label> : <input type="email" name="email" id="email" required><br><!-- error= "Oops... wrong address?" -->
-                </div> 
-                <div id="birthday">      
-                    <label for="bday">Birthday</label> : <input type="date" name="bday" id="bday"><br>
-                </div>
-                <div id="gender">      
-                    <label>Gender</label> : <br>
+                <label for="exampleInputName2">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                        <div id="gender">      
+                            <label>Gender</label> : <br>
                                <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label><br>
                                <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label><br>
-                               <input type="radio" name="gender" value="other" id="other"><label for="other">Other</label><br>
+                               <input type="radio" name="gender" value="other" id="other"><label for="other">Other</label>
                 </div>
                 <div id="country">                  
                     <label>Country</label> : <select required>
@@ -286,31 +279,60 @@
                     <option value="ZWE">Zimbabwe</option>
                 </select><br><!-- error= "Where are you from?" -->
                 </div>
-        </fieldset> 
-    </div>
-
-    <div class="message">           
+        </div>
+</div>  
+   
+<div class="row">
+  <div class="col-md-12">    
+           
         <fieldset>
            <legend>Inconvenience</legend> 
             <div id="Subject">       
                 <label>Subject</label> : <select required>
-                            <option value="">Hardware Guide</option>
-                            <option value="">Troubleshooting Guide</option>
-                            <option value="">Software Guide</option>
-                            <option value="">Other</option>
+                            <option value="hardware">Hardware Guide</option>
+                            <option value="troubleshooting">Troubleshooting Guide</option>
+                            <option value="software">Software Guide</option>
+                            <option value="other">Other</option>
                         </select><br><!-- error= "Knowing what kind of problem you have will help us find the solution quicker..." -->
             </div>
             <div id="message">               
                 <label>Message</label> : <br>
-                       <textarea rows="4" cols="50">
-            Type your message here.
-                       </textarea><br>
+                       <textarea class="form-control" rows="3"></textarea>
             </div>           
             <div id="submit"><input type="submit"></div>    
         </fieldset>             
-    </div>    
-</section>
+    </div> 
+    <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+ 
+   
+
+
+
+  
+</form>    
+  </div>
+  </div>
+  </div>                        
                
-</form>
+
+</div>
+
 </body>
 </html>
