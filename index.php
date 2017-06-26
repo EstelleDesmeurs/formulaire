@@ -8,25 +8,28 @@
     <title>Technical Support</title>
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
    <div class="row">
   <div class="col-md-6"><img src="hackers-poulette-logo.png" alt="logo">  </div>
   <div class="col-md-6"><h1>How can we<br>help you?</h1></div>
     </div>
-<form class="form-horizontal" action="cible.php" method="post">        
+<div class="row"> 
+<div class="col-xs-6">
+<form class="form-horizontal" action="cible.php" method="post"> 
+<div class="form-group">       
 <div class="row"> 
     <div class="col-md-12">  
-           <div class="form-group">
+           
             <legend>Customer's details</legend>   
                 <label for="exampleInputName2">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                    <input type="text" class="form-control" name="name" id="exampleInputName2" placeholder="Jane Doe">
                         <div id="gender">      
                             <label>Gender</label> : <br>
                                <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label><br>
                                <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label><br>
                                <input type="radio" name="gender" value="other" id="other"><label for="other">Other</label>
                 </div>
-                <div id="country">                  
+               <div id="country">                  
                     <label>Country</label> : <select required>
                     <option value="AFG">Afghanistan</option>
                     <option value="ALA">Åland Islands</option>
@@ -287,7 +290,7 @@
   <div class="col-md-12">    
         <legend>Inconvenience</legend> 
             <div id="Subject">       
-                <label>Subject</label> : <select required>
+                <label>Subject</label> : <select>
                             <option value="hardware">Hardware Guide</option>
                             <option value="troubleshooting">Troubleshooting Guide</option>
                             <option value="software">Software Guide</option>
@@ -296,14 +299,14 @@
             </div>
             <div id="message">               
                 <label>Message</label> : <br>
-                       <textarea class="form-control" rows="3"></textarea>
+                       <textarea name="message" class="form-control" rows="3"></textarea>
             </div>           
-            <div id="submit"><input type="submit"></div>                
+            <div id="submit"><input type="submit" id="submit"></div>                
     </div> 
     <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
   </div>
   <div class="form-group">
@@ -321,9 +324,21 @@
         </div>  
       </div> 
     </div>
-    </div>               
-</form>   
-</div>
+    </div> 
+    <input type="text" id="bot">
+    <script>
 
+$('#submit').click(function(e){
+if ($('input#bot').val().length != 0) {
+alert('Vous etes un robot');
+e.preventDefault();
+return false;
+}
+});
+    </script>              
+</form> 
+</div>   
+</div>
+</div>  
 </body>
 </html>
