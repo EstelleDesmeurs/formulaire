@@ -1,17 +1,9 @@
 
 img {
-    position: relative;
-    top: -70px;
-}
-
-img {
     width: 200px;
     height: 200px;
 }
 
-
-
-
-.message {
-    padding-bottom: 20px;
+#bot {
+	display: none;;
 }
