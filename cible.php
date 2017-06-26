@@ -1,3 +1,4 @@
+
 <?php
 
 function sanitize($x) { 
@@ -13,11 +14,6 @@ $email = $_POST['email'];
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
                    
-/*function validate($y) {
-    $y = filter_var($y, FILTER_VALIDATE_STRING);
-    return $y;
-}*/
-                                         
 
 
 if(isset($_POST['pouletteform'])) {
