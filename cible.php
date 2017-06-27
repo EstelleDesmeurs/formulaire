@@ -1,20 +1,13 @@
 
 <?php
 
-function sanitize($x) { 
-    $x = filter_var($x, FILTER_SANITIZE_STRING);
-    $x = htmlspecialchars($x, FILTER_SANITIZE_STRING);    
-    return $x;
-}
- 
-$name = sanitize($_POST['name']);                             
-$message = sanitize($_POST['message']);
+ $options = array(
+    'name'    => FILTER_SANITIZE_STRING,
+    'email'   => FILTER_VALIDATE_EMAIL,
+    'message' => FILTER_SANITIZE_STRING);     
 
-$email = $_POST['email'];
-$email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
-                   
-
+$result = filter_input_array(INPUT_POST, $options);                  
+$result = trim($result);
 
 if(isset($_POST['pouletteform'])) {
     if(
@@ -29,14 +22,7 @@ if(isset($_POST['pouletteform'])) {
         echo "Please fill all the required fields!";
     }
 }   
-
-                                         
-/*if (isset($email)) {
-    echo("Email is valid");
-} 
-else {
-    echo("Email is not valid");
-}       */                               
+                            
 
 if (!$email){
 echo "Invalid Sender's Email";
